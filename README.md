@@ -1,4 +1,7 @@
-This here is a theme for mutt. It configures some settings related to
+This here is a theme for mutt. **It requires the [Solarized 16-color
+terminal
+palette](https://github.com/altercation/vim-colors-solarized#important-note-for-terminal-users).**
+It configures some settings related to
 styles and colors. I'll give you a screen shot and let you figure out the
 rest:
 
