@@ -21,3 +21,7 @@ everything is still sexy.
 ## License
 
 Liberally licensed under the terms of the WTFPL (see LICENSE).
+
+## Also of interest
+
+[Lunatic for Vim!](https://github.com/chreekat/vim-colors-lunatic)
