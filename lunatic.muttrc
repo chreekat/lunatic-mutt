@@ -9,7 +9,7 @@
 
 # LAYOUT # {{{1
 
-set status_chars = " !XA"
+set status_chars = " !  "
 set markers = yes
 set menu_scroll
 set pager_index_lines = 10
@@ -22,8 +22,8 @@ set status_on_top = yes
 #            +num|      |           |        |   |    + subject
 #           "%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
 set index_format = "%Z│%-20.20L%?M?╟[%M] &║?%s%* │%[%_d-%b] "
-set pager_format = "  %s"
-set status_format = "%r %?u? (%u new) ?❬%_f❭%?M?[%M in limited view] ?%* %?t?Tagged: %t?%?d? Deleted: %d?"
+set pager_format = "%s"
+set status_format = "%_f%r %?u?(%u new)? %?M?[%M in limited view]? %* %?t?Tagged: %t?%?d? Deleted: %d?"
 
 # COLORS # {{{1
 
