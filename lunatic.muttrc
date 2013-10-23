@@ -21,7 +21,7 @@ set status_on_top = yes
 #                + flags|           |        |   + num bytes
 #            +num|      |           |        |   |    + subject
 #           "%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
-set index_format = "%Z│%-20.20L%?M?╟[%M] &║?%s%* │%[%_d-%b] "
+set index_format = "%Z│%-20.20L%?M?╟[%M] &║?%s%* │%[%_d-%b %H:%M] "
 set pager_format = "%s"
 set status_format = "%_f%r %?u?(%u new)? %?M?[%M in limited view]? %* %?t?Tagged: %t?%?d? Deleted: %d?"
 
