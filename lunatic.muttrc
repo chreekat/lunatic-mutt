@@ -39,14 +39,17 @@ set status_format = $my_status_format
 # base01    color10  comments / secondary content
 # base0     color12  foreground
 # base1     color14  emphasized
-# yellow    color3
-# orange    color9
 # red       color1
-# magenta   color5
-# violet    color13
-# blue      color4
-# cyan      color6
 # green     color2
+# yellow    color3
+# blue      color4
+# magenta   color5
+# cyan      color6
+# orange    color9
+# violet    color13
+#
+# UNUSED:   color7
+#           color11
 #
 # "normal" pair: base0/base03 (color12/color8)
 # "emphasized" pair: base1/base02 (color14/color0)
