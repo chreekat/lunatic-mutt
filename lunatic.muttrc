@@ -21,62 +21,67 @@ set status_on_top = yes
 #                + flags|           |        |   + num bytes
 #            +num|      |           |        |   |    + subject
 #           "%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
-set index_format = "%Z│%-20.20L%?M?╟[%M] &║?%s%* │%[%_d-%b %H:%M] "
-set pager_format = "%s"
+set index_format = "%Z│%-20.20L│%-20.20F%?M?╟[%M] &║?%s%* │%[%_d-%b %H:%M] "
+set pager_format = "%n —— %s"
+
+# This is the default, sans the 40-character filename limit. This is
+# not ideal; I'd prefer truncating when necessary, but preserving the
+# rightmost portion.
+set attach_format = "%u%D%I %t%4n %T%d%> [%.7m/%.10M, %.6e%?C?, %C?, %s] "
 set my_status_format = "%_f%r %?u?(%u new)? %?M?[%M in limited view]? %* %?t?Tagged: %t?%?d? Deleted: %d?"
 set status_format = $my_status_format
 
-# COLORS # {{{1
+# # COLORS # {{{1
 
-# I've only used 'colorN' to specify colors, since the Solarized hack
-# makes for a mismatch between names and true colors. (E.g. violet is
-# "bright magenta", and base0 is "bright blue"). Here's the cheat sheet:
-#
-# solarized colorN   comment
-# --------- -------- -------
-# base03    color8   background
-# base02    color0   background highlights
-# base01    color10  comments / secondary content
-# base0     color12  foreground
-# base1     color14  emphasized
-# red       color1
-# green     color2
-# yellow    color3
-# blue      color4
-# magenta   color5
-# cyan      color6
-# orange    color9
-# violet    color13
-#
-# UNUSED:   color7
-#           color11
-#
-# "normal" pair: base0/base03 (color12/color8)
-# "emphasized" pair: base1/base02 (color14/color0)
+# # I've only used 'colorN' to specify colors, since the Solarized hack
+# # makes for a mismatch between names and true colors. (E.g. violet is
+# # "bright magenta", and base0 is "bright blue"). Here's the cheat sheet:
+# #
+# # solarized colorN   comment
+# # --------- -------- -------
+# # base03    color8   background
+# # base02    color0   background highlights
+# # base01    color10  comments / secondary content
+# # base0     color12  foreground
+# # base1     color14  emphasized
+# # red       color1
+# # green     color2
+# # yellow    color3
+# # blue      color4
+# # magenta   color5
+# # cyan      color6
+# # orange    color9
+# # violet    color13
+# #
+# # UNUSED:   color7
+# #           color11
+# #
+# # "normal" pair: base0/base03 (color12/color8)
+# # "emphasized" pair: base1/base02 (color14/color0)
 
-#color attachment
-color body color10 color8 "^gpg: .*"
-color body color2 color8 "^gpg: Good signature .*"
-color body color5 color8 "^gpg: encrypted with .*"
-color body brightcolor1 color8 "^gpg: BAD signature .*"
-#color bold
-#color header
-color hdrdefault color6 color8
-color index color2 color8 ~N # new
-color index color1 color8 ~D # deleted
-color index color3 color8 ~T # tagged
-color indicator color8 color13
-color markers color3 color0  # indicates wrapped lines
-#color message
-color normal color12 color8
-color quoted color10 color8
-#color quotedN
-color search color8 color3
-color signature color10 color8
-color status brightcolor14 color0
-#color tilde
-color tree color12 color8
-# color underline
+# color attachment color10 color8
+# color body color10 color8 "^gpg: .*"
+# color body color2 color8 "^gpg: Good signature .*"
+# color body color5 color8 "^gpg: encrypted with .*"
+# color body brightcolor1 color8 "^gpg: BAD signature .*"
+# #color bold
+# #color header
+# color hdrdefault color6 color8
+# color index color2 color8 ~N # new
+# color index color1 color8 ~D # deleted
+# color index color3 color8 ~T # tagged
+# color indicator color8 color13
+# color markers color3 color0  # indicates wrapped lines
+# #color message
+# color normal color12 color8
+# color quoted color10 color8
+# #color quotedN
+# color search color8 color3
+# color signature color10 color8
+# color status brightcolor14 color0
+# color tilde color12 color8
+# color tree color12 color8
+# # color underline
 
 # }}}1
 # vim: filetype=muttrc fdm=marker
