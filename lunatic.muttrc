@@ -73,7 +73,12 @@ color body brightcolor1 color8 "^gpg: BAD signature .*"
 # color markers color3 color0  # indicates wrapped lines
 # #color message
 color normal color12 color8
-# color quoted color10 color8
+color quoted color3 color8
+color quoted1 color4 color8
+color quoted2 color5 color8
+color quoted3 color3 color8
+color quoted4 color4 color8
+color quoted5 color5 color8
 # #color quotedN
 # color search color8 color3
 color signature color10 color8
